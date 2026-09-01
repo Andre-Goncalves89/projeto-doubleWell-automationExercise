@@ -2,8 +2,8 @@ import { test } from '@playwright/test';
 import { HomePage } from '../src/pages/HomePage';
 import { LoginPage } from '../src/pages/LoginPage';
 
-test.describe('CT02 - Efetuar Login', () => {
-    test('Deve realizar login com email e senha já cadastrados', async({page}) => {
+test.describe('Efetuar Login', () => {
+    test('CT02 - Deve realizar login com email e senha já cadastrados', async({page}) => {
         const homePage = new HomePage(page);
         const loginPage = new LoginPage(page);
 
@@ -17,8 +17,8 @@ test.describe('CT02 - Efetuar Login', () => {
     })
 })
 
-test.describe('CT03 - Login incorreto', () => {
-    test('Deve tentar realizar login com email e senha incorretos', async({page}) => {
+test.describe(' Login incorreto', () => {
+    test('CT03 - Deve tentar realizar login com email e senha incorretos', async({page}) => {
         const homePage = new HomePage(page);
         const loginPage = new LoginPage(page);
 

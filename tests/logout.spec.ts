@@ -2,8 +2,8 @@ import { test } from '@playwright/test';
 import { HomePage } from '../src/pages/HomePage';
 import { LoginPage } from '../src/pages/LoginPage';
 
-test.describe('CT-04 Logout de usuário', () => {
-    test('Deve efetuar login e depois logout com sucesso', async({page}) => {
+test.describe('Logout de usuário', () => {
+    test('CT-04 Deve efetuar login e depois logout com sucesso', async({page}) => {
         const homePage = new HomePage(page);
         const loginPage = new LoginPage(page);
         // navegando para a pg de Login

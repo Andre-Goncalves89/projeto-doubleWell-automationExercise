@@ -4,8 +4,8 @@ import { LoginPage } from '../src/pages/LoginPage';
 import { SignupPage } from '../src/pages/SignupPage';
 import { AccountCreatedPage } from '../src/pages/AccountCreatedPage';
 
-test.describe('CT01 - Cadastro de Usuário', () => {
-  test('Deve realizar o cadastro de um usuário com sucesso', async ({page}) => {
+test.describe(' Cadastro de Usuário', () => {
+  test('CT01 - Deve realizar o cadastro de um usuário com sucesso', async ({page}) => {
     const homePage = new HomePage(page);
     const loginPage = new LoginPage(page);
     const signupPage = new SignupPage(page);
@@ -48,7 +48,7 @@ test.describe('CT01 - Cadastro de Usuário', () => {
 
   })
 
-  test('Deve buscar realizar cadastro com email já existente registrado', async({page}) => {
+  test('CT05 - Deve buscar realizar cadastro com email já existente registrado', async({page}) => {
     const homePage = new HomePage(page);
     const loginPage = new LoginPage(page);
 
