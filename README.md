@@ -67,7 +67,10 @@ A suíte cobre fluxos críticos de negócio, autenticação, formulários e nave
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/Andre-Goncalves89/projeto-doubleWell-automationExercise.git cd projeto-doubleWell-automationExercise
+   git clone https://github.com/Andre-Goncalves89/projeto-doubleWell-automationExercise.git
+   ```
+   ```
+   cd projeto-doubleWell-automationExercise
    ```
 ---
 
