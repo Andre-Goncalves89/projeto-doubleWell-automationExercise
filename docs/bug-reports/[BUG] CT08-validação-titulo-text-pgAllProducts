@@ -1,0 +1,25 @@
+Título: [CT08] Instabilidade (Flakiness) e Interceptação Indevida de Redirecionamento por Anúncios de Terceiros na Página Products.
+
+Severidade: Média / Bloqueante para Automação.
+
+Descrição do Problema:
+A navegação via interface (clique no link/botão "Products" na Home) apresenta comportamento intermitente e falhas de asserção. Scripts de anúncios dinâmicos e iframes intersticiais de terceiros (como o google_vignette) são acionados pelo evento de clique do usuário ou da automação, cobrindo a tela ou alterando o estado do navegador antes da renderização da rota interna de produtos. Isso impede que o teste valide estavelmente a presença do título esperado ("All Products").
+
+Passos para Reproduzir:
+
+Acessar a URL do sistema de testes.
+
+Permanecer na página inicial (Home).
+
+Clicar no botão ou link correspondente à seção "Products".
+
+Aguardar o carregamento da página de listagem de produtos e a validação do texto "All Products".
+
+Comportamento Esperado:
+A navegação a partir do clique no menu deve redirecionar o usuário estavelmente para a rota de produtos, renderizando o elemento correspondente ao título "All Products" sem interferência de pop-ups ou sobreposições visuais.
+
+Comportamento Atual:
+O clique aciona um anúncio intersticial externo que altera a árvore DOM/URL ou intercepta o foco da automação, fazendo com que o teste falhe por timeout ou capture o título incorreto da home ("Features Items"), exigindo a adoção de navegação direta por rota (/products) como contorno técnico.
+
+Evidências:
+Vídeos de log de execução e relatórios salvos no projeto (bug-report-products-failed-in-validate-contains-text-AllProducts05.mp4 e relatórios HTML do Playwright) evidenciando o bloqueio pelo iframe do google_vignette e a divergência no texto capturado pelo seletor.

@@ -12,44 +12,80 @@ A solução foi projetada utilizando **Playwright** com **TypeScript**, seguindo
 
 ```text
 automation-exercise-playwright/
-├── .github/
-│   └── workflows/          # Pipeline CI/CD gerado pelo Playwright
-├── docs/                   # Documentação do projeto
-│   ├── ROADMAP.md          # Roadmap geral e rastreabilidade da suíte
-│   └── test-cases/         # Casos de teste detalhados em Markdown
-│       ├── CT01-register-user.md
-│       ├── CT02-login-correct-password.md
-│       ├── CT03-login-incorrect-password.md
-│       ├── CT04-logout-user.md
-│       ├── CT05-register-existing-email.md
-│       ├── CT06-contact-us-form.md
-│       ├── CT07-verify-test-cases-page.md
-│       └── CT08-verify-products-and-detail-page.md
-├── src/                    # Código-fonte da automação (Page Object Model)
-│   ├── fixtures/           # Arquivos estáticos e dados para teste (ex: anexos)
-│   ├── pages/              # Classes de páginas (Page Objects)
-│   │   ├── BasePage.ts
-│   │   ├── HomePage.ts
-│   │   ├── LoginPage.ts
-│   │   ├── SignupPage.ts
-│   │   ├── ContactUsPage.ts
-│   │   └── ProductsPage.ts
-│   └── utils/              # Helpers e geradores de dados auxiliares
-├── tests/                  # Especificações de teste (Specs Playwright)
-│   ├── CT01-register-user.spec.ts
-│   ├── CT02-login-correct.spec.ts
-│   ├── CT03-login-incorrect.spec.ts
-│   ├── CT04-logout.spec.ts
-│   ├── CT05-register-existing-email.spec.ts
-│   ├── CT06-contact-us.spec.ts
-│   ├── CT07-test-cases-page.spec.ts
-│   └── CT08-products-catalog.spec.ts
-├── .gitignore              # Regras de ignorados do Git
-├── package.json            # Dependências e scripts do projeto
-├── playwright.config.ts    # Configuração global do Playwright (Navegadores, Timeouts, BaseURL)
-└── README.md               # Guia de execução e documentação principal
+# 📁 Arquitetura do Projeto - Automation Exercise (Doublewell)
+
+Este documento descreve a estrutura atualizada de pastas, páginas, suítes de testes e documentação do projeto Playwright em TypeScript.
+
+```text
+📁 .github/
+📁 docs/
+  📁 bug-reports/
+    📁 evidences/
+      📄 CT06-bug-report-contactUs-spec-failed.mp4
+      📄 CT06-test-report-contactUs-spec-passed.mp4
+      📄 CT08-bug-report-products-failed-in-validate-contains-text-AllProducts05.mp4
+    📁 files/
+      📄 [BUG] CT06-Botão-submit-formContactUs-instavel
+      📄 [BUG] CT08-validação-titulo-text-pgAllProducts
+  📁 test-cases/
+    📄 CT01-register-user.md
+    📄 CT02-login-correct-password.md
+    📄 CT03-login-incorrect-password.md
+    📄 CT04-logout-user.md
+    📄 CT05-register-existing-email.md
+    📄 CT06-contact-us-form.md
+    📄 CT07-verify-test-cases-page.md
+    📄 CT08-verify-products-and-detail-page.md
+  📁 root_docs/
+    📄 ROADMAP.md
+📁 node_modules/
+📁 playwright-report/
+📁 src/
+  📁 fixtures/
+    📄 sample.txt
+  📁 pages/
+    📄 AccountCreatedPage.ts
+    📄 BasePage.ts
+    📄 ContactUsPage.ts
+    📄 HomePage.ts
+    📄 LoginPage.ts
+    📄 ProductsPage.ts
+    📄 ProductViewDeatilsPage.ts
+    📄 SignupPage.ts
+    📄 TestCasePage.ts
+  📁 utils/
+📁 tests/
+  📄 contact-us.spec.ts
+  📄 login.spec.ts
+  📄 logout.spec.ts
+  📄 products.spec.ts
+  📄 signup.spec.ts
+  📄 test-case-pg.spec.ts
+📁 config_files/
+  📄 .gitignore
+  📄 package-lock.json
+  📄 package.json
+  📄 playwright.config.ts
+  📄 README.md
 ```
 
+## 📋 Descrição dos Componentes Principais
+
+### 📂 `docs/`
+- **`bug-reports/evidences/`**: Contém as evidências em vídeo (`.mp4`) capturadas durante as execuções de testes que apresentaram falhas ou comportamentos de *flakiness*.
+- **`test-cases/`**: Documentação detalhada em Markdown (`.md`) para cada caso de teste mapeado (`CT01` a `CT08`).
+- **`ROADMAP.md`**: Planejamento e evolução das entregas do projeto de automação.
+
+### 📂 `src/pages/` (Page Object Model)
+- **`BasePage.ts`**: Classe abstrata base que centraliza métodos reutilizáveis (como navegação, preenchimento, cliques e asserções unificadas de texto com espera implícita).
+- **`ProductsPage.ts`**: Mapeamento e ações da listagem de produtos.
+- **`ProductViewDetailsPage.ts`**: Mapeamento da interface de tipagem (`ProductDetails`) e seletores/métodos para validação dos detalhes do produto (nome, categoria, preço, disponibilidade, condição e marca).
+- Demais páginas de suporte (`LoginPage`, `SignupPage`, `ContactUsPage`, `TestCasePage`, `HomePage`, `AccountCreatedPage`).
+
+### 📂 `tests/`
+- **`products.spec.ts`**: Casos de teste automatizados cobrindo a listagem de produtos e a inspeção de detalhes (CT08).
+- Demais arquivos de especificação cobrindo os fluxos de autenticação, contato e navegação.
+```
 ---
 
 ## 🎯 Mapeamento dos Casos de Teste (Test Scope)

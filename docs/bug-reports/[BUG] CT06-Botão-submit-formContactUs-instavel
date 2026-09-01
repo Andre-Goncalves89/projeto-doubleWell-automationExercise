@@ -1,0 +1,26 @@
+Título: [CT06] Instabilidade (Flakiness) e Bloqueio de Submissão no Formulário de Contato devido a Anúncios de Terceiros.
+
+Severidade: Média / Bloqueante para Automação.
+
+Descrição do Problema:
+O formulário de contato (/contact_us) apresenta comportamento intermitente de falha no envio. Anúncios dinâmicos, iframes e scripts de terceiros injetados na interface cobrem o elemento de submissão ou geram erros de Mixed Content no console, impedindo que o clique do usuário/automação dispare o evento de envio e renderize a mensagem de sucesso de forma consistente.
+
+Passos para Reproduzir:
+
+Acessar a URL do sistema de testes.
+
+Navegar até a aba/página "Contact us".
+
+Preencher os campos obrigatórios (Nome, E-mail, Assunto e Mensagem).
+
+Clicar no botão "Submit".
+
+Comportamento Esperado:
+O formulário deve ser submetido estavelmente a cada tentativa, acionando o diálogo de confirmação do navegador e exibindo a mensagem de sucesso verde (Success! Your details have been submitted successfully.).
+
+Comportamento Atual:
+O clique é frequentemente ignorado ou bloqueado por elementos de propaganda e sobreposições na camada visual, fazendo com que a automação estoure o timeout aguardando o elemento de sucesso.
+
+Evidências:
+
+Vídeos de log de execução salvos no projeto (test-report-contactUs-spec-passed.mp4) e (bug-report-contactUs-spec-failed.mp4) evidenciando os erros no console do DevTools e a inconsistência na aparição do alerta.
