@@ -13,7 +13,7 @@ export abstract class BasePage {
 
     async fillInput(locator: Locator, value: string): Promise<void> {
         await locator.waitFor({state: 'visible'});
-        await await locator.fill(value);
+        await locator.fill(value);
     }
 
     async clickElement(locator: Locator): Promise<void> {
