@@ -27,7 +27,7 @@ O framework adota o padrão de projeto **Page Object Model (POM)** combinado com
  ┣ 📜 package.json                # Dependências e scripts de execução
  ┣ 📜 playwright.config.ts        # Configurações globais do Playwright
  ┗ 📜 README.md                   # Documentação principal do projeto
-
+```
  ---
 
 ## 📋 Mapeamento da Suíte de Testes (CT01 - CT08)
@@ -67,8 +67,7 @@ A suíte cobre fluxos críticos de negócio, autenticação, formulários e nave
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/seu-usuario/automation-exercise-playwright.git](https://github.com/seu-usuario/automation-exercise-playwright.git)
-   cd automation-exercise-playwright
+   git clone https://github.com/Andre-Goncalves89/projeto-doubleWell-automationExercise.git cd projeto-doubleWell-automationExercise
    ```
 ---
 
