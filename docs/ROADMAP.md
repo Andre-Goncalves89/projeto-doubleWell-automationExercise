@@ -85,7 +85,6 @@ Este documento descreve a estrutura atualizada de pastas, páginas, suítes de t
 ### 📂 `tests/`
 - **`products.spec.ts`**: Casos de teste automatizados cobrindo a listagem de produtos e a inspeção de detalhes (CT08).
 - Demais arquivos de especificação cobrindo os fluxos de autenticação, contato e navegação.
-```
 ---
 
 ## 🎯 Mapeamento dos Casos de Teste (Test Scope)
