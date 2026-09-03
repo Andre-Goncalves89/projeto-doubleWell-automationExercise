@@ -61,12 +61,12 @@ Este documento descreve a estrutura atualizada de pastas, páginas, suítes de t
   📄 products.spec.ts
   📄 signup.spec.ts
   📄 test-case-pg.spec.ts
-📁 config_files/
-  📄 .gitignore
-  📄 package-lock.json
-  📄 package.json
-  📄 playwright.config.ts
-  📄 README.md
+
+📄 .gitignore
+📄 package-lock.json
+📄 package.json
+📄 playwright.config.ts
+📄 README.md
 ```
 
 ## 📋 Descrição dos Componentes Principais

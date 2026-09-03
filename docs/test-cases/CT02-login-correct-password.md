@@ -14,7 +14,7 @@
 ---
 
 ### Dados do Teste
-* **E-mail:** `testedw@qa.com`
+* **E-mail:** `testqadw@qa.com`
 * **Senha:** `test123`
 
 ---

@@ -37,11 +37,11 @@ export class HomePage extends BasePage {
         await this.clickElement(this.contactusButton);
     }
 
-    async validateHomePage(): Promise<void> {
-        await this.homeValidate.isVisible();
-    }
-
     async clickProductsPage(): Promise<void> {
         await this.clickElement(this.productsButton);
+    }
+
+    async validateHomePage(): Promise<void> {
+        await this.homeValidate.isVisible();
     }
 }

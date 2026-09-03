@@ -14,10 +14,10 @@
 
 ### Dados do Teste
 * **Nome:** `Usuário QA`
-* **E-mail:** `contato@qa.com`
+* **E-mail:** `testqa@qa.com`
 * **Assunto:** `Suporte Técnico - Teste Automatizado`
 * **Mensagem:** `Mensagem de teste automatizado enviada via formulário de contato.`
-* **Arquivo Anexo:** `exemplo_upload.txt` (arquivo válido no diretório de fixtures)
+* **Arquivo Anexo:** `./src/fixtures/sample.txt` (arquivo válido no diretório de fixtures)
 
 ---
 

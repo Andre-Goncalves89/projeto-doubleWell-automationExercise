@@ -19,7 +19,8 @@ test.describe('Contact Us', () => {
         await homePage.clickContactusButton();
 
         await contactUsPage.validateContactUsTitle();
-        await contactUsPage.fillContactUsForm('Test Qa', 'testqa@qa.com', 'teste de subject', 'testando mensagem...');
+        await contactUsPage.fillContactUsForm('Usuário QA', 'testqa@qa.com', 'Suporte Técnico - Teste Automatizado',
+             'Mensagem de teste automatizado enviada via formulário de contato.');
         await contactUsPage.uploadFile('./src/fixtures/sample.txt');
         await contactUsPage.clickContactUsSubmitButton();
         await contactUsPage.validateSuccessSubmitMessage();
