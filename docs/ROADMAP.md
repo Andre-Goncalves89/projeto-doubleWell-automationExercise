@@ -8,9 +8,9 @@ A solução foi projetada utilizando **Playwright** com **TypeScript**, seguindo
 
 ---
 
-## 🏗️ Arquitetura e Estrutura de Pastas
+# 🏗️ Arquitetura e Estrutura de Pastas
 
-# 📁 Arquitetura do Projeto - Automation Exercise (Doublewell)
+## 📁 Arquitetura do Projeto - Automation Exercise (Doublewell)
 
 Este documento descreve a estrutura atualizada de pastas, páginas, suítes de testes e documentação do projeto Playwright em TypeScript.
 
