@@ -17,6 +17,25 @@ Este documento descreve a estrutura atualizada de pastas, páginas, suítes de t
 ```text
 📁 .github/
 📁 docs/
+  📁 bdd/
+    📁 bdd-eng/
+      📄CT01-register-user.feature
+      📄CT02-login-correct-password.feature
+      📄CT03-login-incorrect-password.feature
+      📄CT04-logout-user.feature
+      📄CT05-register-existing-email.feature
+      📄CT06-contact-us-form.feature
+      📄CT07-verify-test-cases-page.feature
+      📄CT08-verify-products-and-details.feature
+    📁 bdd-pt/
+      📄CT01-register-user.feature
+      📄CT02-login-correct-password.feature
+      📄CT03-login-incorrect-password.feature
+      📄CT04-logout-user.feature
+      📄CT05-register-existing-email.feature
+      📄CT06-contact-us-form.feature
+      📄CT07-verify-test-cases-page.feature
+      📄CT08-verify-products-and-details.feature
   📁 bug-reports/
     📁 evidences/
       📄 CT06-bug-report-contactUs-spec-failed.mp4
