@@ -24,6 +24,7 @@ test.describe(' Cadastro de Usuário', () => {
     await loginPage.clickSignupButton();
 
     await signupPage.validateSignupTitle();
+    // escolha de gênero(radio)
     await signupPage.chooseGender();
     await signupPage.typeAccountInformation('Andrezinho', 'test123');
     await signupPage.chooseBirthday('10', 'April', '2010');
